@@ -41,6 +41,7 @@ NUM_CLASSES = 1 + 1 # Background
 STEPS_PER_EPOCH = 100
 ```
 
+Colab Notebook for Example training on [Microcontroller Segmentatiom](https://colab.research.google.com/drive/142qQPGuzz7AemMVDl8iKw0fEe-hnIL1p?usp=sharing)
 ### Training the model on Custom Data
 
 ```bash
