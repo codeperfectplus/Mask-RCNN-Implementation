@@ -22,6 +22,8 @@ from mrcnn import visualize
 # git clone https://github.com/matterport/Mask_RCNN
 # sys.path.append("path_to_mask_rcnn")
 
+# Download Link 
+# https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5
 if not os.path.isfile("mask_rcnn_coco.h5"):
     url = "https://github.com/ayoolaolafenwa/PixelLib/releases/download/1.2/mask_rcnn_coco.h5"
     print("Downloading the mask_rcnn_coco.h5")
@@ -30,8 +32,6 @@ if not os.path.isfile("mask_rcnn_coco.h5"):
 
 # Path to trained weights file
 COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
-# Download Link 
-# https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5
 
 # Directory to save logs and model checkpoints, if not provided
 # through the command line argument --logs
@@ -53,7 +53,7 @@ class ModelConfig(Config):
     # We use a GPU with 12GB memory, which can fit two images.
     # Adjust down if you use a smaller GPU.
     IMAGES_PER_GPU = 2 # 1
- 
+
     # Number of classes (including background)
     NUM_CLASSES = 1 + 1 # Background,
     # typically after labeled, class can be set from Dataset class
@@ -329,9 +329,6 @@ if __name__ == '__main__':
     # Select weights file to load
     if args.weights.lower() == "coco":
         weights_path = COCO_WEIGHTS_PATH
-        # Download weights file
-        if not os.path.exists(weights_path):
-            utils.download_trained_weights(weights_path)
     elif args.weights.lower() == "last":
         # Find last trained weights
         weights_path = model.find_last()
@@ -357,7 +354,7 @@ if __name__ == '__main__':
         filenames = os.listdir(args.weights)
         for filename in filenames:
             if filename.endswith(".h5"):
-                print("Load weights from {filename} ".format(filename=filename))
+                print(f"Load weights from {filename}")
                 model.load_weights(os.path.join(args.weights,filename),by_name=True)
                 savedfile_name = os.path.splitext(filename)[0] + ".jpg"
                 test(model, image_path=args.image,video_path=args.video, savedfile=savedfile_name)
