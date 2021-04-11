@@ -1,5 +1,13 @@
-# Mask-RCNN-Implementation
-Mask RCNN Implementation on Custom Data(Labelme)
+<p align="center">
+  <a href="https://github.com/codePerfectPlus/Mask-RCNN-Implementation"><img src="https://capsule-render.vercel.app/api?type=rect&color=009ACD&height=100&section=header&text=Mask-R-Implementation&fontSize=60%&fontColor=ffffff" alt="website title image"></a>
+  <h2 align="center">👉 Mask RCNN Implementation on LabelMe Annotations Data 👈</h2>
+</p>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3.8.5-lightgrey?style=for-the-badge" alt="repo language">
+<a href="https://github.com/codePerfectPlus/Mask-RCNN-Implementation/stargazers"><img src="https://img.shields.io/github/stars/codePerfectPlus/Mask-RCNN-Implementation?style=for-the-badge" alt="github stars"></a>
+<a href="https://github.com/codePerfectPlus/Mask-RCNN-Implementation/network/members"><img src="https://img.shields.io/github/forks/codePerfectPlus/Mask-RCNN-Implementation?style=for-the-badge" alt="github forks"></a>
+<img src="https://img.shields.io/github/languages/code-size/codePerfectPlus/Mask-RCNN-Implementation?style=for-the-badge" alt="code size">
 
 ## Prepare Data
 
